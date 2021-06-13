@@ -37,7 +37,10 @@ Route::get('/about', function () {
 Route::resource('users', UserController::class);
 Route::resource('comment', CommentController::class);
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware(['web'])->group(function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
+    Route::get('/user', [App\Http\Controllers\HomeController::class, 'user'])->name('user');
+});
 
 
 // Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('user');
