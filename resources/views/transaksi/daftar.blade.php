@@ -6,7 +6,7 @@
             <h2>Daftar Transaksi Penjualan</h2>
         </div>
         <div class="float-right my-2">
-            <a class="btn btnsuccess" href="{{route('transaksi.cetak_pdf',$transaksi->id)}}"> Cetak PDF</a>
+            <a class="btn btn-primary" href="{{ url('../transaksi/cetak_pdf') }}"> Cetak PDF</a>
         </div>
     </div>
 </div>
