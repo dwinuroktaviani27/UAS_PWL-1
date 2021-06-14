@@ -14,8 +14,7 @@
                         </div>
                     @endif
 
-                    <li class="nav-item">
-                    <a href="">{{ __('User') }}</a></li>
+                    <li class="nav-item"><a href="{{route('transaksi.create')}}">{{ __('Beli') }}</a></li>
                     <li class="nav-item"><a href="">{{ __('ini user') }}</a></li>
                 </div>
             </div>

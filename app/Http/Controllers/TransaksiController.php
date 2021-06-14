@@ -20,8 +20,7 @@ class TransaksiController extends Controller
         //
         $transaksi = Transaksi::all();
         $posts = Transaksi::orderBy('id', 'desc')->paginate(6);
-        return view('transaksi.daftar', compact('transaksi'));
-        with('i', (request()->input('page',1) - 1) * 5);
+        return view('transaksi.daftar', compact('transaksi'))->with('i', (request()->input('page',1) - 1) * 5);
     }
 
     /**
@@ -57,7 +56,7 @@ class TransaksiController extends Controller
 
         Transaksi::create($request->all());
 
-        return redirect()->route('transaksi.index')
+        return redirect()->route('user')
         ->with('succes', 'Data Berhasil Ditambahkan');
     }
 
@@ -70,7 +69,7 @@ class TransaksiController extends Controller
     public function show($id)
     {
         //
-        $Transksi = Tranksaksi::find($id);
+        $Transaksi = Transaksi::find($id);
         return view('transaksi.detail', compact('Transaksi'));
     }
 
