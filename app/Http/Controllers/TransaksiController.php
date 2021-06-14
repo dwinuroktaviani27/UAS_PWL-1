@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-
+use PDF;
 class TransaksiController extends Controller
 {
     /**
@@ -122,5 +122,11 @@ class TransaksiController extends Controller
         //
         Transaksi::find($id)->delete();
         return redirect()->route('transaksi.index')->with('success', 'data berhasil dihapus');
+    }
+    public function cetak_pdf($id)
+    {
+        $transaksi = Transaksi::where('id',$id)->first();
+        $pdf = PDF::loadview('transaksi.cetak_pdf',['transaksi'=>$transaksi]);
+        return $pdf->stream();
     }
 }

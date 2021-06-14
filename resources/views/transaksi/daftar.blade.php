@@ -6,7 +6,7 @@
             <h2>Daftar Transaksi Penjualan</h2>
         </div>
         <div class="float-right my-2">
-            <a class="btn btnsuccess" href=""> Cetak PDF</a>
+            <a class="btn btnsuccess" href="{{route('transaksi.cetak_pdf',$transaksi->id)}}"> Cetak PDF</a>
         </div>
     </div>
 </div>
@@ -20,6 +20,7 @@
 <table class="table table-bordered">
     <tr>
         <th>No</th>
+        <th>ID</th>
         <th>Nama</th>
         <th>Alamat</th>
         <th>No HP</th>
@@ -33,6 +34,7 @@
     @foreach ($transaksi as $Transaksi)
     <tr>
         <td scope="row">{{ $no }}</td>
+        <td>{{$Transaksi->id}}</td>
         <td>{{ $Transaksi->nama }}</td>
         <td>{{ $Transaksi->alamat }}</td>
         <td>{{ $Transaksi->no_hp }}</td>
