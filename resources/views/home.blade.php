@@ -1,25 +1,56 @@
-@extends('layouts.app')
-
+@extends('layouts.layout_admin')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<!--Main content-->
+<section class="container margin-bottom-50">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+    <div class="about-container">
 
-                    <li class="nav-item">
-                    <a href="{{ route('users.index') }}">{{ __('Edit User') }}</a></li>
-                    <li class="nav-item"><a href="{{ route('comment.index') }}">{{ __('Edit comment') }}</a></li>
-                </div>
-            </div>
+        <div class="about-container-left">
+            <img src="img/about/2.jpg" alt="Image" class="img-responsive">
+        </div>
+
+        <div class="about-container-right">
+            <h2 class="about-title">One Column</h2>
+            <p class="about-description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+            <p class="about-description">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+            <a href="#" class="about-link">Duised sitDamet</a>
+        </div>
+
+    </div>
+
+    <div class="about-container-2 margin-bottom-50">
+        <div class="about-container-inner">
+            <h3 class="about-title-2">Two Columns</h3>
+            <img src="img/about/3.jpg" alt="Image" class="img-responsive margin-bottom-15">
+            <p class="about-description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <a href="#" class="about-link about-link-2">Details</a>
+        </div>
+        <div class="about-container-inner">
+            <h3 class="about-title-2">Two Columns</h3>
+            <img src="img/about/4.jpg" alt="Image" class="img-responsive margin-bottom-15">
+            <p class="about-description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <a href="#" class="about-link about-link-2">Details</a>
         </div>
     </div>
-</div>
-@endsection
+
+    <div class="about-container-2">
+        <div class="services-container-inner">
+            <h3 class="about-title-2">Three Columns</h3>
+            <img src="img/services-1.jpg" alt="Image" class="img-responsive margin-bottom-15">
+            <p class="about-description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <a href="#" class="about-link about-link-2">Details</a>
+        </div>
+        <div class="services-container-inner">
+            <h3 class="about-title-2">Three Columns</h3>
+            <img src="img/services-1.jpg" alt="Image" class="img-responsive margin-bottom-15">
+            <p class="about-description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <a href="#" class="about-link about-link-2">Details</a>
+        </div>
+        <div class="services-container-inner">
+            <h3 class="about-title-2">Three Columns</h3>
+            <img src="img/services-1.jpg" alt="Image" class="img-responsive margin-bottom-15">
+            <p class="about-description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <a href="#" class="about-link about-link-2">Details</a>
+        </div>
+    </div>
+    @endsection

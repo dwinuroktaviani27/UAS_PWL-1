@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,7 +35,22 @@ Route::get('/about', function () {
     return view('about-us');
 });
 
+Route::get('/galeri', function () {
+    return view('admin.galeri');
+});
+
+Route::get('/produk', function () {
+    return view('admin.produk');
+});
+
+Route::get('/kontak', function () {
+    return view('admin.kontak');
+});
+
 Route::resource('users', UserController::class);
+Route::get('/transaksi', [TransaksiController::class, 'create']);
+Route::resource('transaksi', TransaksiController::class);
+
 Route::resource('comment', CommentController::class);
 Auth::routes();
 Route::middleware(['web'])->group(function () {
