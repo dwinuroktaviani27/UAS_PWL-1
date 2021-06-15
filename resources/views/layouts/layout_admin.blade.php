@@ -11,7 +11,6 @@
 Motor Template
 http://www.templatemo.com/tm-463-motor
 -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
   <link href="{{asset('css/templatemo-style.css')}}" rel="stylesheet">
