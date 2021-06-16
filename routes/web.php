@@ -2,6 +2,7 @@
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,6 +52,7 @@ Route::resource('users', UserController::class);
 Route::get('/transaksi', [TransaksiController::class, 'create']);
 Route::get('/transaksi/cetak_pdf', [TransaksiController::class, 'cetak_pdf'])->name('transaksi.cetak_pdf');
 Route::resource('transaksi', TransaksiController::class);
+Route::resource('produk', ProdukController::class);
 //Route::get('/transaksi/cetak_pdf/{id}',[TransaksiController::class,'cetak_pdf'])->name('transaksi.cetak_pdf');
 Route::resource('comment', CommentController::class);
 Auth::routes();
