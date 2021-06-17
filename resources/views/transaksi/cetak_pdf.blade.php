@@ -3,7 +3,7 @@
 <head>
     <title>Membuat Laporan PDF Dengan DOMPDF Laravel</title>
 </head>
-<body>
+<body onload="window.print();">
     <style type="text/css">
         table tr td,
         table tr th{
