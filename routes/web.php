@@ -51,7 +51,7 @@ Route::get('/kontak', function () {
 Route::resource('users', UserController::class);
 Route::get('/transaksi', [TransaksiController::class, 'create']);
 Route::resource('transaksi', TransaksiController::class);
-Route::get('/transaksi/cetak_pdf', [TransaksiController::class, 'cetak_pdf'])->name('transaksi.cetak_pdf');
+Route::get('cetak-pdf', [TransaksiController::class, 'cetak_pdf'])->name('cetak_pdf');
 Route::resource('produk', ProdukController::class);
 //Route::get('/transaksi/cetak_pdf/{id}',[TransaksiController::class,'cetak_pdf'])->name('transaksi.cetak_pdf');
 Route::resource('comment', CommentController::class);

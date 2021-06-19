@@ -128,7 +128,7 @@ class TransaksiController extends Controller
     public function cetak_pdf()
     {
         $transaksi = Transaksi::all();
-        $pdf = PDF::loadview('transaksi.cetak_pdf',['transaksi'=>$transaksi]);
-        return view('transaksi.cetak_pdf',compact('pdf'));
+        $pdf = PDF::loadview('cetak-pdf',['transaksi'=>$transaksi]);
+        return $pdf->stream();
     }
 }
