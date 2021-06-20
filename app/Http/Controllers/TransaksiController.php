@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produk;
 use App\Models\Transaksi;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
@@ -32,8 +33,8 @@ class TransaksiController extends Controller
      */
     public function create()
     {
-        //
-        return view('transaksi.transaksi');
+        $produk = Produk::all();
+        return view('transaksi.transaksi',compact('produk'));
     }
 
     /**

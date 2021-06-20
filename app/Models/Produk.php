@@ -19,4 +19,8 @@ class Produk extends Model
         'keterangan',
         'foto'
     ];
+    public function transaksi()
+    {
+        return $this->hasMany(Transaksi::class);
+    }
 }

@@ -17,9 +17,13 @@ class Transaksi extends Model
         'nama',
         'alamat',
         'no_hp',
-        'nama_barang',
         'harga',
         'jumlah_barang',
         'total_harga',
+        'product_id',
     ];
+    public function product()
+    {
+        return $this->belongsTo(Produk::class);
+    }
 }

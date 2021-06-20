@@ -38,7 +38,7 @@
         <td>{{ $Transaksi->nama }}</td>
         <td>{{ $Transaksi->alamat }}</td>
         <td>{{ $Transaksi->no_hp }}</td>
-        <td>{{ $Transaksi->nama_barang }}</td>
+        <td>{{ $Transaksi->product->nama }}</td>
         <td>{{ $Transaksi->harga }}</td>
         <td>{{ $Transaksi->jumlah_barang }}</td>
         <td>{{ $Transaksi->total_harga }}</td>

@@ -39,8 +39,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="nama_barang">Nama Barang</label>
-                        <input type="text" name="nama_barang" class="formcontrol" id="foto" aria-describedby="Nama">
+                        <label for="nama_barang">nama barang</label>
+                        <select name="product_id" class="form-control" id="product_id">
+                            @foreach($produk as $produk)
+                            <option value="{{$produk->id}}">{{$produk->nama}}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="form-group">
