@@ -51,7 +51,7 @@ class TransaksiController extends Controller
             'nama' => 'required',
             'alamat' => 'required',
             'no_hp' => 'required',
-            'nama_barang' => 'required',
+            'product_id' => 'required',
             'harga' => 'required',
             'jumlah_barang' => 'required',
             'total_harga' => 'required',
@@ -85,7 +85,8 @@ class TransaksiController extends Controller
     {
         //
         $Transaksi = Transaksi::find($id);
-        return view('transaksi.edit', compact('Transaksi'));
+        $produk = Produk::all();
+        return view('transaksi.edit', compact('Transaksi','produk'));
     }
 
     /**
@@ -103,13 +104,14 @@ class TransaksiController extends Controller
             'nama' => 'required',
             'alamat' => 'required',
             'no_hp' => 'required',
-            'nama_barang' => 'required',
+            'product_id' => 'required',
             'harga' => 'required',
             'jumlah_barang' => 'required',
             'total_harga' => 'required',
         ]);
         Transaksi::find($id)->update($request->all());
-        
+        $produk = new Produk;
+        $produk->id = $request->get('product_id');
         return redirect()->route('transaksi.index')->with('success', 'Penjualan Berhasil Diupdate');
     }
 

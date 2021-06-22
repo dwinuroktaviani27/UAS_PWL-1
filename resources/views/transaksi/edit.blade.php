@@ -40,7 +40,11 @@
                     </div>
                     <div class="form-group">
                         <label for="nama_barang">Nama Barang</label>
-                        <input type="text" name="nama_barang" class="formcontrol" id="nama_barang" value="{{ $Transaksi->nama_barang }}" ariadescribedby="nama_barang">
+                        <select name="product_id" class="form-control" id="product_id">
+                            @foreach($produk as $Produk)
+                            <option value="{{$Produk->id}}"{{$Transaksi->product_id == $Produk->id ? 'selected' : ''}}>{{$Produk->nama}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="harga">No HP</label>
